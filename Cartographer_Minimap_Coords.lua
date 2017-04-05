@@ -15,6 +15,19 @@ L:RegisterTranslations("enUS", function() return {
 	["Show high precision coordinates"] = true,
 } end)
 
+L:RegisterTranslations("ruRU", function() return {
+	["MiniMap Coords"] = "Координаты",
+	["Show Background"] = "Показать фон",
+	["Show Border"] = "Показать бордюр",
+	["Reset Position"] = "Сброс позиции",
+	["Background color"] = "Цвет фона",
+	["The color of the background frame behind coordinates"] = "Цвет фона окна за координатами",
+	["Text color"] = "Цвет текста",
+	["The color of the coordinates"] = "Цвет координат",
+	["High precision"] = "Высокая точность",
+	["Show high precision coordinates"] = "Показать координаты с высокой точностью",
+} end)
+
 L:RegisterTranslations("esES", function() return {
 	["MiniMap Coords"] = "Coordenadas MiniMapa",
 	["Show Background"] = "Mostrar Fondo",
