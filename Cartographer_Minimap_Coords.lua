@@ -177,7 +177,7 @@ function Cartographer_MiniMapCoords:OnEnable()
 		self.frame.loc:SetFontObject(GameFontNormalSmall)
 		self.frame.loc:SetTextColor(self.db.profile.txtR, self.db.profile.txtG, self.db.profile.txtB, self.db.profile.txtA)
 
-		self.frame:SetScript("OnUpdate", function() Cartographer_MiniMapCoords_OnUpdate(arg1) end)
+		self.frame:SetScript("OnUpdate", Cartographer_MiniMapCoords_OnUpdate)
 		self.frame:SetScript("OnDragStart",
 			function()
 				self.frame:StartMoving()
@@ -207,7 +207,8 @@ do
 end
 
 local lastUpdate = 0
-function Cartographer_MiniMapCoords_OnUpdate(elapsed)
+function Cartographer_MiniMapCoords_OnUpdate()
+  local elapsed = arg1
   if WorldMapButton:IsVisible() then return end
   lastUpdate = lastUpdate+elapsed
   if lastUpdate <= TOOLTIP_UPDATE_TIME then return end
