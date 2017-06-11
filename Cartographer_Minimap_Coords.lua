@@ -42,6 +42,16 @@ L:RegisterTranslations("esES", function() return {
 } end)
 
 Cartographer_MiniMapCoords = Cartographer:NewModule("MiniMapCoords", "AceConsole-2.0", "AceEvent-2.0")
+local select = select or 
+function(index, ...)
+  assert(tonumber(index) or index == "#", "Invalid argument #1 to select(). Usage: select(\"#\"|int,...)")
+  if index == "#" then return arg.n end
+  local sub = { }
+  for i = index, arg.n do
+    sub[table.getn(sub) + 1] = arg[i]
+  end
+  return unpack(sub)
+end
 
 local Cartographer_MiniMapCoordsFrame
 
